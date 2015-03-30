@@ -2,5 +2,5 @@ deployment:
   staging:
     branch: master
     commands:
-    	- git push git@heroku.com:svmarco.git $CIRCLE_SHA1:refs/heads/master
-    	- heroku run rake db:migrate --app svmarco
+        - git push git@heroku.com:svmarco.git $CIRCLE_SHA1:refs/heads/master
+        - heroku run rake db:migrate --app svmarco
