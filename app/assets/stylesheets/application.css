@@ -15,6 +15,9 @@
  */
 
 
-table{
-	border:100px;
-}
+a.newcarpath    {
+	color: #FFF;
+      &:hover {
+         color: #000;
+       }
+     }
