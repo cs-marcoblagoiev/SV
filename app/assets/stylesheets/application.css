@@ -15,9 +15,12 @@
  */
 
 
-a.newcarpath    {
-	color: #FFF;
-      &:hover {
-         color: #000;
-       }
-     }
+a.new_car_button{
+color: #999 !important;
+font-size: 20px;
+font-weight: bold;
+}
+
+table{
+	width: auto !important 
+}
