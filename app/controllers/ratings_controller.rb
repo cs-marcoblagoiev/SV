@@ -1,13 +1,15 @@
 class RatingsController < ApplicationController
 
-  def update
-    @rating = Rating.find(params[:id])
-    @car = @rating.car
-    if @rating.update_attributes(score: params[:score])
-      respond_to do |format|
-        format.js
-      end
-    end
-  end
+  def create
+  	@rating = Rating.new
+  	@rating.score = params[:score]
+  	
+  	@car = Car.find(params[:car_id])
+  	@car.ratings << @rating
+  	@car.save
+
+  	render :json => {success: true}
+  end  	
+ 	
 
 end
