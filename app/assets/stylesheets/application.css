@@ -24,3 +24,7 @@ font-weight: bold;
 table{
 	width: auto !important 
 }
+
+a navbar-brand{
+	color:#000;
+}
