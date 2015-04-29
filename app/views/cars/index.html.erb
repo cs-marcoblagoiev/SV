@@ -1,5 +1,8 @@
 <p id="notice"><%= notice %></p>
 
+
+
+
 <h1>Listing Cars</h1>
 
 <h4>First modified view</h4>
@@ -10,6 +13,7 @@
       <th>Color</th>
       <th>Hp</th>
       <th>Model</th>
+      <th>Rating</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -20,6 +24,7 @@
         <td><%= car.color %></td>
         <td><%= car.hp %></td>
         <td><%= car.model %></td>
+        <td><div class="star" data-score="<%= car.average_rating %>"></div></td>
         <td><%= link_to 'Show', car %></td>
         <td><%= link_to 'Edit', edit_car_path(car) %></td>
         <td><%= link_to 'Destroy', car, method: :delete, data: { confirm: 'Are you sure?' } %></td>
