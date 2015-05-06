@@ -38,6 +38,9 @@ gem 'rails_12factor'
 gem 'pg'
 gem 'tzinfo-data'
 
+gem 'devise'
+gem 'letter_opener'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
