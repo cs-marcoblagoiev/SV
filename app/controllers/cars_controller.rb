@@ -1,3 +1,4 @@
+# @CarsController
 class CarsController < ApplicationController
   before_action :set_car, only: [:show, :edit, :update, :destroy]
 
@@ -5,7 +6,6 @@ class CarsController < ApplicationController
   # GET /cars.json
   def index
     @cars = Car.all
-    #@rating = Rating.where(car_id: @car.id).first unless @rating @rating = Rating.create(car_id: @cars.id, score: 0) end 
   end
 
   # GET /cars/1
@@ -63,6 +63,7 @@ class CarsController < ApplicationController
   end
 
   private
+
     # Use callbacks to share common setup or constraints between actions.
     def set_car
       @car = Car.find(params[:id])
@@ -70,6 +71,6 @@ class CarsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def car_params
-      params.require(:car).permit(:color, :hp, :model)
+      params.require(:car).permit(:color, :hp, :model, :pic)
     end
 end

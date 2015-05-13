@@ -20,5 +20,10 @@
   <div class="id_star" data-car-id="<%= @car.id %>"></div>
 </p>
 
+<p>
+    <strong>Photo</strong>
+    <%= image_tag(@car.pic_url(:thumb)) if @car.pic? %>
+</p>
+
 <%= link_to 'Edit', edit_car_path(@car) %> |
 <%= link_to 'Back', cars_path %>
